@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:MJFlux"
+      name = "MJFlux">
+      <FileRef
+         location = "group:MJPayload.h">
+      </FileRef>
+      <FileRef
+         location = "group:MJPayload.m">
+      </FileRef>
+      <FileRef
+         location = "group:MJStore.h">
+      </FileRef>
+      <FileRef
+         location = "group:MJStore.m">
+      </FileRef>
+      <FileRef
+         location = "group:MJDispatcher.h">
+      </FileRef>
+      <FileRef
+         location = "group:MJDispatcher.m">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:MJFlux iOS Example/MJFlux iOS Example.xcodeproj">
+   </FileRef>
+</Workspace>
