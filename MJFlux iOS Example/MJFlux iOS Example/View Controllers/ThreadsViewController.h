@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  ThreadsViewController.h
 //  MJFlux
 //
 //  Created by Michael Lyons on 11/11/14.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UITableViewController
+@interface ThreadsViewController : UITableViewController
 
 
 @end

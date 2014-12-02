@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F074A71B1A2F5EF900931C49 /* UnreadThreadStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F074A71A1A2F5EF900931C49 /* UnreadThreadStore.m */; };
+		F074A73C1A2F78E800931C49 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F074A73B1A2F78E800931C49 /* MessagesViewController.m */; };
 		F07BC9A11A13A6580041A1F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F07BC9A01A13A6580041A1F8 /* main.m */; };
 		F07BC9A41A13A6580041A1F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F07BC9A31A13A6580041A1F8 /* AppDelegate.m */; };
 		F07BC9AD1A13A6580041A1F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F07BC9AB1A13A6580041A1F8 /* Main.storyboard */; };
 		F07BC9AF1A13A6580041A1F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F07BC9AE1A13A6580041A1F8 /* Images.xcassets */; };
 		F07BC9B21A13A6580041A1F8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F07BC9B01A13A6580041A1F8 /* LaunchScreen.xib */; };
 		F07BC9CD1A13A6E90041A1F8 /* ChatDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F07BC9C91A13A6E90041A1F8 /* ChatDispatcher.m */; };
-		F07BC9CE1A13A6E90041A1F8 /* ChatStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F07BC9CC1A13A6E90041A1F8 /* ChatStore.m */; };
-		F07BC9D41A13A70B0041A1F8 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F07BC9D11A13A70B0041A1F8 /* FirstViewController.m */; };
-		F07BC9D51A13A70B0041A1F8 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F07BC9D31A13A70B0041A1F8 /* SecondViewController.m */; };
+		F07BC9CE1A13A6E90041A1F8 /* ThreadStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F07BC9CC1A13A6E90041A1F8 /* ThreadStore.m */; };
+		F07BC9D41A13A70B0041A1F8 /* ThreadsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F07BC9D11A13A70B0041A1F8 /* ThreadsViewController.m */; };
 		F07BC9DA1A13A7940041A1F8 /* MJDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F07BC9D71A13A7940041A1F8 /* MJDispatcher.m */; };
 		F07BC9DB1A13A7940041A1F8 /* MJPayload.m in Sources */ = {isa = PBXBuildFile; fileRef = F07BC9D91A13A7940041A1F8 /* MJPayload.m */; };
 		F07BCA3B1A13A9C20041A1F8 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F07BCA171A13A9C20041A1F8 /* AFHTTPRequestOperation.m */; };
@@ -36,10 +37,17 @@
 		F07BCA4A1A13A9C20041A1F8 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = F07BCA381A13A9C20041A1F8 /* UIRefreshControl+AFNetworking.m */; };
 		F07BCA4B1A13A9C20041A1F8 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = F07BCA3A1A13A9C20041A1F8 /* UIWebView+AFNetworking.m */; };
 		F07BCA4E1A13AA290041A1F8 /* MJStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F07BCA4D1A13AA290041A1F8 /* MJStore.m */; };
-		F07BCA891A140F020041A1F8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F07BCA881A140F020041A1F8 /* AudioToolbox.framework */; };
+		F0B71EF81A16555700F53F6C /* ChatAPIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B71EF71A16555700F53F6C /* ChatAPIUtil.m */; };
+		F0C016331A2E5FD400B0014F /* Thread.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C016321A2E5FD400B0014F /* Thread.m */; };
+		F0C016361A2E61AC00B0014F /* MessagesStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C016351A2E61AC00B0014F /* MessagesStore.m */; };
+		F0C016391A2E635300B0014F /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C016381A2E635300B0014F /* Message.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F074A7191A2F5EF900931C49 /* UnreadThreadStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnreadThreadStore.h; sourceTree = "<group>"; };
+		F074A71A1A2F5EF900931C49 /* UnreadThreadStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnreadThreadStore.m; sourceTree = "<group>"; };
+		F074A73A1A2F78E800931C49 /* MessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesViewController.h; sourceTree = "<group>"; };
+		F074A73B1A2F78E800931C49 /* MessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesViewController.m; sourceTree = "<group>"; };
 		F07BC99B1A13A6580041A1F8 /* MJFlux iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MJFlux iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F07BC99F1A13A6580041A1F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F07BC9A01A13A6580041A1F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -50,12 +58,10 @@
 		F07BC9B11A13A6580041A1F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F07BC9C81A13A6E90041A1F8 /* ChatDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDispatcher.h; sourceTree = "<group>"; };
 		F07BC9C91A13A6E90041A1F8 /* ChatDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDispatcher.m; sourceTree = "<group>"; };
-		F07BC9CB1A13A6E90041A1F8 /* ChatStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatStore.h; sourceTree = "<group>"; };
-		F07BC9CC1A13A6E90041A1F8 /* ChatStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatStore.m; sourceTree = "<group>"; };
-		F07BC9D01A13A70B0041A1F8 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		F07BC9D11A13A70B0041A1F8 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		F07BC9D21A13A70B0041A1F8 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		F07BC9D31A13A70B0041A1F8 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		F07BC9CB1A13A6E90041A1F8 /* ThreadStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadStore.h; sourceTree = "<group>"; };
+		F07BC9CC1A13A6E90041A1F8 /* ThreadStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadStore.m; sourceTree = "<group>"; };
+		F07BC9D01A13A70B0041A1F8 /* ThreadsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadsViewController.h; sourceTree = "<group>"; };
+		F07BC9D11A13A70B0041A1F8 /* ThreadsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadsViewController.m; sourceTree = "<group>"; };
 		F07BC9D61A13A7940041A1F8 /* MJDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJDispatcher.h; path = ../MJFlux/MJDispatcher.h; sourceTree = "<group>"; };
 		F07BC9D71A13A7940041A1F8 /* MJDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJDispatcher.m; path = ../MJFlux/MJDispatcher.m; sourceTree = "<group>"; };
 		F07BC9D81A13A7940041A1F8 /* MJPayload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJPayload.h; path = ../MJFlux/MJPayload.h; sourceTree = "<group>"; };
@@ -99,6 +105,14 @@
 		F07BCA4C1A13AA290041A1F8 /* MJStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJStore.h; path = ../MJFlux/MJStore.h; sourceTree = "<group>"; };
 		F07BCA4D1A13AA290041A1F8 /* MJStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJStore.m; path = ../MJFlux/MJStore.m; sourceTree = "<group>"; };
 		F07BCA881A140F020041A1F8 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F0B71EF61A16555700F53F6C /* ChatAPIUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatAPIUtil.h; sourceTree = "<group>"; };
+		F0B71EF71A16555700F53F6C /* ChatAPIUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatAPIUtil.m; sourceTree = "<group>"; };
+		F0C016311A2E5FD400B0014F /* Thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thread.h; sourceTree = "<group>"; };
+		F0C016321A2E5FD400B0014F /* Thread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thread.m; sourceTree = "<group>"; };
+		F0C016341A2E61AC00B0014F /* MessagesStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesStore.h; sourceTree = "<group>"; };
+		F0C016351A2E61AC00B0014F /* MessagesStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesStore.m; sourceTree = "<group>"; };
+		F0C016371A2E635300B0014F /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		F0C016381A2E635300B0014F /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +120,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F07BCA891A140F020041A1F8 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +158,8 @@
 				F07BC9A21A13A6580041A1F8 /* AppDelegate.h */,
 				F07BC9A31A13A6580041A1F8 /* AppDelegate.m */,
 				F07BC9AB1A13A6580041A1F8 /* Main.storyboard */,
+				F0C016301A2E5FBF00B0014F /* Data Objects */,
+				F0B71EF51A16552100F53F6C /* Utils */,
 				F07BC9C71A13A6E90041A1F8 /* Dispatchers */,
 				F07BC9CA1A13A6E90041A1F8 /* Stores */,
 				F07BC9CF1A13A70B0041A1F8 /* View Controllers */,
@@ -177,8 +192,12 @@
 		F07BC9CA1A13A6E90041A1F8 /* Stores */ = {
 			isa = PBXGroup;
 			children = (
-				F07BC9CB1A13A6E90041A1F8 /* ChatStore.h */,
-				F07BC9CC1A13A6E90041A1F8 /* ChatStore.m */,
+				F07BC9CB1A13A6E90041A1F8 /* ThreadStore.h */,
+				F07BC9CC1A13A6E90041A1F8 /* ThreadStore.m */,
+				F0C016341A2E61AC00B0014F /* MessagesStore.h */,
+				F0C016351A2E61AC00B0014F /* MessagesStore.m */,
+				F074A7191A2F5EF900931C49 /* UnreadThreadStore.h */,
+				F074A71A1A2F5EF900931C49 /* UnreadThreadStore.m */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -186,10 +205,10 @@
 		F07BC9CF1A13A70B0041A1F8 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F07BC9D01A13A70B0041A1F8 /* FirstViewController.h */,
-				F07BC9D11A13A70B0041A1F8 /* FirstViewController.m */,
-				F07BC9D21A13A70B0041A1F8 /* SecondViewController.h */,
-				F07BC9D31A13A70B0041A1F8 /* SecondViewController.m */,
+				F07BC9D01A13A70B0041A1F8 /* ThreadsViewController.h */,
+				F07BC9D11A13A70B0041A1F8 /* ThreadsViewController.m */,
+				F074A73A1A2F78E800931C49 /* MessagesViewController.h */,
+				F074A73B1A2F78E800931C49 /* MessagesViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -266,6 +285,26 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		F0B71EF51A16552100F53F6C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F0B71EF61A16555700F53F6C /* ChatAPIUtil.h */,
+				F0B71EF71A16555700F53F6C /* ChatAPIUtil.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F0C016301A2E5FBF00B0014F /* Data Objects */ = {
+			isa = PBXGroup;
+			children = (
+				F0C016311A2E5FD400B0014F /* Thread.h */,
+				F0C016321A2E5FD400B0014F /* Thread.m */,
+				F0C016371A2E635300B0014F /* Message.h */,
+				F0C016381A2E635300B0014F /* Message.m */,
+			);
+			path = "Data Objects";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -339,26 +378,31 @@
 			files = (
 				F07BCA431A13A9C20041A1F8 /* AFURLSessionManager.m in Sources */,
 				F07BCA401A13A9C20041A1F8 /* AFURLConnectionOperation.m in Sources */,
+				F0C016361A2E61AC00B0014F /* MessagesStore.m in Sources */,
 				F07BCA4A1A13A9C20041A1F8 /* UIRefreshControl+AFNetworking.m in Sources */,
 				F07BCA471A13A9C20041A1F8 /* UIButton+AFNetworking.m in Sources */,
 				F07BCA491A13A9C20041A1F8 /* UIProgressView+AFNetworking.m in Sources */,
 				F07BCA3B1A13A9C20041A1F8 /* AFHTTPRequestOperation.m in Sources */,
-				F07BC9D51A13A70B0041A1F8 /* SecondViewController.m in Sources */,
+				F0C016391A2E635300B0014F /* Message.m in Sources */,
 				F07BCA461A13A9C20041A1F8 /* UIAlertView+AFNetworking.m in Sources */,
+				F074A73C1A2F78E800931C49 /* MessagesViewController.m in Sources */,
 				F07BCA3C1A13A9C20041A1F8 /* AFHTTPRequestOperationManager.m in Sources */,
 				F07BC9DA1A13A7940041A1F8 /* MJDispatcher.m in Sources */,
 				F07BC9A41A13A6580041A1F8 /* AppDelegate.m in Sources */,
+				F0B71EF81A16555700F53F6C /* ChatAPIUtil.m in Sources */,
 				F07BCA481A13A9C20041A1F8 /* UIImageView+AFNetworking.m in Sources */,
 				F07BCA3D1A13A9C20041A1F8 /* AFHTTPSessionManager.m in Sources */,
 				F07BCA451A13A9C20041A1F8 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				F07BCA441A13A9C20041A1F8 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				F07BC9CD1A13A6E90041A1F8 /* ChatDispatcher.m in Sources */,
 				F07BCA4E1A13AA290041A1F8 /* MJStore.m in Sources */,
-				F07BC9D41A13A70B0041A1F8 /* FirstViewController.m in Sources */,
-				F07BC9CE1A13A6E90041A1F8 /* ChatStore.m in Sources */,
+				F07BC9D41A13A70B0041A1F8 /* ThreadsViewController.m in Sources */,
+				F07BC9CE1A13A6E90041A1F8 /* ThreadStore.m in Sources */,
+				F074A71B1A2F5EF900931C49 /* UnreadThreadStore.m in Sources */,
 				F07BCA3F1A13A9C20041A1F8 /* AFSecurityPolicy.m in Sources */,
 				F07BC9A11A13A6580041A1F8 /* main.m in Sources */,
 				F07BCA411A13A9C20041A1F8 /* AFURLRequestSerialization.m in Sources */,
+				F0C016331A2E5FD400B0014F /* Thread.m in Sources */,
 				F07BCA3E1A13A9C20041A1F8 /* AFNetworkReachabilityManager.m in Sources */,
 				F07BCA4B1A13A9C20041A1F8 /* UIWebView+AFNetworking.m in Sources */,
 				F07BCA421A13A9C20041A1F8 /* AFURLResponseSerialization.m in Sources */,

@@ -9,8 +9,9 @@
 #import "MJDispatcher.h"
 
 typedef NS_ENUM(NSUInteger, ChatPayloadType) {
-    ChatPayloadTypeClickThread = 1,
-    ChatPayloadTypeNewMessage,
+    ChatPayloadTypeTapThread = 1,
+    ChatPayloadTypeLeaveThread,
+    ChatPayloadTypeCreateMessage,
     ChatPayloadTypeReceieveMessages,
     ChatPayloadTypeDeleteMessage,
     ChatPayloadTypeGetChats

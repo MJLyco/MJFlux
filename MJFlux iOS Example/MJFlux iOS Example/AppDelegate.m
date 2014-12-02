@@ -7,7 +7,10 @@
 //
 
 #import "AppDelegate.h"
-#import "ChatStore.h"
+#import "ChatDispatcher.h"
+#import "Message.h"
+#import "ChatAPIUtil.h"
+#import "ThreadStore.h"
 
 @interface AppDelegate ()
 
@@ -18,33 +21,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    MJPayload *payload = [[MJPayload alloc] init];
-    payload.type = ChatPayloadTypeGetChats;
-    [[ChatDispatcher dispatcher] dispatch:payload];
-
-    [self sendRandomMessage];
-
+    [ChatAPIUtil simulateRealTime];
     return YES;
-}
-
-- (void)sendRandomMessage
-{
-    NSInteger seconds = arc4random() % 8;
-
-    __weak typeof(self)weakSelf = self;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(seconds * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-
-        MJPayload *payload = [[MJPayload alloc] init];
-        payload.type = ChatPayloadTypeNewMessage;
-        payload.info = [ChatStore newMessage:[[NSUUID UUID].UUIDString substringToIndex:3]];
-        [[ChatDispatcher dispatcher] dispatch:payload];
-
-        __weak typeof(self)strongSelf = weakSelf;
-        if (strongSelf != nil)
-        {
-            [weakSelf sendRandomMessage];
-        }
-    });
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
