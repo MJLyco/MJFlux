@@ -15,6 +15,11 @@
  */
 typedef void (^MJCallbackBlock)(MJPayload *payload);
 
+
+/**
+ *  A Dispatcher handles the flow of information and blocks
+ *  actions from being taken while it is still processing
+ */
 @interface MJDispatcher : NSObject
 
 /**
