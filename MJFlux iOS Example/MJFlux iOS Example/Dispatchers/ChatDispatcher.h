@@ -19,6 +19,6 @@ typedef NS_ENUM(NSUInteger, ChatPayloadType) {
 
 @interface ChatDispatcher : MJDispatcher
 
-+ (ChatDispatcher *)dispatcher;
++ (instancetype)dispatcher;
 
 @end

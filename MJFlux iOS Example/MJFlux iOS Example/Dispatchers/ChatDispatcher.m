@@ -10,12 +10,12 @@
 
 @implementation ChatDispatcher
 
-+ (ChatDispatcher *)dispatcher
++ (instancetype)dispatcher
 {
-    static MJDispatcher *_singleton = nil;
+    static ChatDispatcher *_singleton = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^ {
-        _singleton = [[MJDispatcher alloc] init];
+        _singleton = [[ChatDispatcher alloc] init];
     });
     return _singleton;
 }
