@@ -10,7 +10,7 @@
 
 @interface ThreadStore : MJStore
 
-+ (ThreadStore *)store;
++ (instancetype)store;
 
 + (NSDictionary *)threads;
 

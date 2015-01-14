@@ -72,8 +72,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    MJPayload *payload = [[MJPayload alloc] init];
-    payload.type = ChatPayloadTypeLeaveThread;
+    MJPayload *payload = [MJPayload payloadWithType:ChatPayloadTypeLeaveThread andInfo:nil];
     [[ChatDispatcher dispatcher] dispatch:payload];
 }
 
@@ -193,9 +192,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     Thread *thread = self.threads[indexPath.row];
-    MJPayload *payload = [[MJPayload alloc] init];
-    payload.type = ChatPayloadTypeTapThread;
-    payload.info = @{@"threadID": thread.identifier};
+    MJPayload *payload = [MJPayload payloadWithType:ChatPayloadTypeTapThread andInfo:@{@"threadID": thread.identifier}];
     [[ChatDispatcher dispatcher] dispatch:payload];
     [self performSegueWithIdentifier:@"threadTapped" sender:nil];
 }

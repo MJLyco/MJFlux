@@ -10,7 +10,7 @@
 
 @implementation ChatDispatcher
 
-+ (MJDispatcher *)dispatcher
++ (ChatDispatcher *)dispatcher
 {
     static MJDispatcher *_singleton = nil;
     static dispatch_once_t onceToken;

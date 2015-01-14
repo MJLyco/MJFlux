@@ -26,7 +26,7 @@ typedef void (^MJCallbackBlock)(MJPayload *payload);
 *  Registers a callback to be invoked with every dispatched payload. Returns
 *  a token that can be used with `waitFor`.
 *
-*  @param callback callback Block to run when a payload gets dispatched
+*  @param callback Block to run when a payload gets dispatched
 *
 *  @return The unique ID for this callback
 */

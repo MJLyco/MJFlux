@@ -16,7 +16,17 @@
 @interface MJPayload : NSObject
 
 /**
- *  The type of payload we're saying. 
+ *  Create a new MJPayload object with the given parameters
+ *
+ *  @param type What type of payload it is
+ *  @param info The information contained in the payload
+ *
+ *  @return a new MJPayload instance
+ */
++ (instancetype)payloadWithType:(NSUInteger)type andInfo:(NSDictionary *)info;
+
+/**
+ *  The type of payload we're sending.
  *  I recommend using various enums
  */
 @property (nonatomic, assign) NSUInteger type;

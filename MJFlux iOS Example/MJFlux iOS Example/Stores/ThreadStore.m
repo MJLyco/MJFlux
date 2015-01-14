@@ -24,7 +24,7 @@
     [ThreadStore store];
 }
 
-+ (ThreadStore *)store
++ (instancetype)store
 {
     static ThreadStore *_singleton = nil;
     static dispatch_once_t onceToken;

@@ -10,7 +10,7 @@
 
 @interface MessagesStore : MJStore
 
-+ (MessagesStore *)store;
++ (instancetype)store;
 
 + (NSArray *)messagesForThread:(NSString *)thread;
 

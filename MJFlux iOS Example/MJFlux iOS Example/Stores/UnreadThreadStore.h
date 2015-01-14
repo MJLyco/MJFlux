@@ -10,7 +10,7 @@
 
 @interface UnreadThreadStore : MJStore
 
-+ (UnreadThreadStore *)store;
++ (instancetype)store;
 
 + (NSUInteger)count;
 

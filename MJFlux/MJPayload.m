@@ -21,4 +21,12 @@
     return self;
 }
 
++ (instancetype)payloadWithType:(NSUInteger)type andInfo:(NSDictionary *)info
+{
+    MJPayload *payload = [[MJPayload alloc] init];
+    payload.type = type;
+    payload.info = info;
+    return payload;
+}
+
 @end

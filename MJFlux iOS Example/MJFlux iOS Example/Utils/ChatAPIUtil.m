@@ -42,9 +42,7 @@ static BOOL isRefreshing = NO;
 
         isRefreshing = NO;
 
-        MJPayload *payload = [[MJPayload alloc] init];
-        payload.type = ChatPayloadTypeReceieveMessages;
-        payload.info = @{@"rawMessages": @[message]};
+        MJPayload *payload = [MJPayload payloadWithType:ChatPayloadTypeReceieveMessages andInfo:@{@"rawMessages": @[message]}];
         [[ChatDispatcher dispatcher] dispatch:payload];
 
         [ChatAPIUtil simulateRealTime];
@@ -79,9 +77,7 @@ static BOOL isRefreshing = NO;
 
         isRefreshing = NO;
 
-        MJPayload *payload = [[MJPayload alloc] init];
-        payload.type = ChatPayloadTypeReceieveMessages;
-        payload.info = @{@"rawMessages": messages};
+        MJPayload *payload = [MJPayload payloadWithType:ChatPayloadTypeReceieveMessages andInfo:@{@"rawMessages": messages}];
         [[ChatDispatcher dispatcher] dispatch:payload];
 
     });

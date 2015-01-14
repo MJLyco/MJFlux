@@ -27,7 +27,7 @@
     [MessagesStore store];
 }
 
-+ (MessagesStore *)store
++ (instancetype)store
 {
     static MessagesStore *_singleton = nil;
     static dispatch_once_t onceToken;
@@ -35,13 +35,6 @@
         _singleton = [[MessagesStore alloc] init];
     });
     return _singleton;
-}
-
-+ (NSArray *)messagesForThread:(NSString *)threadID
-{
-    NSArray *tempArray = [[MessagesStore store].messages.allValues filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"threadID == %@", threadID]];
-    tempArray = [tempArray sortedArrayUsingDescriptors:@[[[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES]]];
-    return tempArray;
 }
 
 - (instancetype)init
@@ -80,6 +73,13 @@
         }];
     }
     return self;
+}
+
++ (NSArray *)messagesForThread:(NSString *)threadID
+{
+    NSArray *tempArray = [[MessagesStore store].messages.allValues filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"threadID == %@", threadID]];
+    tempArray = [tempArray sortedArrayUsingDescriptors:@[[[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES]]];
+    return tempArray;
 }
 
 - (void)markAllMessagesAsReadWithThreadID:(NSString *)threadID
