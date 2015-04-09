@@ -15,6 +15,7 @@
 
 @interface MessagesViewController ()
 
+@property (nonatomic, strong) NSString *messageStoreListenerID;
 @property (nonatomic, strong) NSArray *messages;
 
 @end
@@ -23,7 +24,7 @@
 
 - (void)dealloc
 {
-    [[MessagesStore store] removeChangeListener:self];
+    [[MessagesStore store] removeChangeListener:self.messageStoreListenerID];
 }
 
 - (void)viewDidLoad
@@ -38,7 +39,7 @@
 
     __weak typeof(self)weakSelf = self;
 
-    [[MessagesStore store] addChangeListener:self usingBlock:^{
+    self.messageStoreListenerID = [[MessagesStore store] addChangeListener:self usingBlock:^{
 
         __strong typeof(self)strongSelf = weakSelf;
         if (strongSelf != nil)
@@ -50,7 +51,7 @@
                 [strongSelf refreshFinished];
             }
         }
-
+        
     }];
 
     [ChatAPIUtil getAllMessages];

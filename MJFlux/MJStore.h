@@ -36,14 +36,16 @@ typedef void(^MJBlock)(void);
  *
  *  @param listener The object doing the listening
  *  @param block    The callback triggered when a change is emitted
+ *
+ *  @return a new UUIDString for removing the listener later
  */
-- (void)addChangeListener:(id)listener usingBlock:(MJBlock)block;
+- (NSString *)addChangeListener:(id)listener usingBlock:(MJBlock)block;
 
 /**
  *  Remove a listener for Store changes
  *
- *  @param listener The object that was doing the listening
+ *  @param listenerID The unique ID given when adding the listener
  */
-- (void)removeChangeListener:(id)listener;
+- (void)removeChangeListener:(NSString *)listenerID;
 
 @end

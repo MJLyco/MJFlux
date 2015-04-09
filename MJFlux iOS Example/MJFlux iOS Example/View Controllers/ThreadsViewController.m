@@ -15,6 +15,8 @@
 
 @interface ThreadsViewController ()
 
+@property (nonatomic, strong) NSString *threadStoreListenerID;
+@property (nonatomic, strong) NSString *unreadThreadStoreListenerID;
 @property (nonatomic, strong) NSArray *threads;
 
 @end
@@ -23,7 +25,8 @@
 
 - (void)dealloc
 {
-    [[ThreadStore store] removeChangeListener:self];
+    [[ThreadStore store] removeChangeListener:self.threadStoreListenerID];
+    [[UnreadThreadStore store] removeChangeListener:self.unreadThreadStoreListenerID];
 }
 
 - (void)viewDidLoad
@@ -40,7 +43,7 @@
 
     __weak typeof(self)weakSelf = self;
 
-    [[ThreadStore store] addChangeListener:self usingBlock:^{
+    self.threadStoreListenerID = [[ThreadStore store] addChangeListener:self usingBlock:^{
 
         __strong typeof(self)strongSelf = weakSelf;
         if (strongSelf != nil)
@@ -55,7 +58,7 @@
 
     }];
 
-    [[UnreadThreadStore store] addChangeListener:self usingBlock:^{
+    self.unreadThreadStoreListenerID = [[UnreadThreadStore store] addChangeListener:self usingBlock:^{
 
         __strong typeof(self)strongSelf = weakSelf;
         if (strongSelf != nil)
