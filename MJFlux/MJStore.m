@@ -10,7 +10,12 @@
 
 @interface MJStore ()
 
-@property (nonatomic, strong) NSMutableArray *listeners;
+/**
+ *  Contains all of the event listeners
+ *  key = memory address of listener
+ *  value = MJBlock to call
+ */
+@property (nonatomic, strong) NSMutableDictionary *listeners;
 
 @end
 
@@ -21,7 +26,7 @@
     self = [super init];
     if (self != nil)
     {
-        self.listeners = [NSMutableArray array];
+        self.listeners = [NSMutableDictionary dictionary];
     }
     return self;
 }
@@ -33,7 +38,7 @@
 
 - (void)envokeBlocks
 {
-    NSArray *blocks = [self.listeners valueForKey:@"block"];
+    NSArray *blocks = [self.listeners allValues];
     for (MJBlock block in blocks)
     {
         block();
@@ -43,21 +48,16 @@
 - (void)addChangeListener:(id)listener usingBlock:(MJBlock)block
 {
     NSString *address = [NSString stringWithFormat:@"%p", listener];
-    if (![[self.listeners valueForKey:@"listener"] containsObject:address])
+    if (self.listeners[address] == nil)
     {
-        [self.listeners addObject:@{@"listener": address,
-                                    @"block": block}];
+        self.listeners[address] = [block copy];
     }
 }
 
 - (void)removeChangeListener:(id)listener
 {
     NSString *address = [NSString stringWithFormat:@"%p", listener];
-    NSUInteger index = [[self.listeners valueForKey:@"listener"] indexOfObject:address];
-    if (index != NSNotFound)
-    {
-        [self.listeners removeObjectAtIndex:index];
-    }
+    [self.listeners removeObjectForKey:address];
 }
 
 @end
