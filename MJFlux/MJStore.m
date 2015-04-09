@@ -48,10 +48,7 @@
 - (void)addChangeListener:(id)listener usingBlock:(MJBlock)block
 {
     NSString *address = [NSString stringWithFormat:@"%p", listener];
-    if (self.listeners[address] == nil)
-    {
-        self.listeners[address] = [block copy];
-    }
+    self.listeners[address] = [block copy];
 }
 
 - (void)removeChangeListener:(id)listener
