@@ -12,7 +12,7 @@
 
 /**
  *  Contains all of the event listeners
- *  key = UUID
+ *  key = UUID listenerID
  *  value = MJBlock to call
  */
 @property (nonatomic, strong) NSMutableDictionary *listeners;
@@ -47,9 +47,9 @@
 
 - (NSString *)addChangeListener:(id)listener usingBlock:(MJBlock)block
 {
-    NSString *address = [[NSUUID UUID] UUIDString];
-    self.listeners[address] = [block copy];
-    return address;
+    NSString *listenerID = [[NSUUID UUID] UUIDString];
+    self.listeners[listenerID] = [block copy];
+    return listenerID;
 }
 
 - (void)removeChangeListener:(NSString *)listenerID
